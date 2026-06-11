@@ -4,4 +4,5 @@ __pycache__/
 *.pyc
 .env
 frontend/dist
-backend/*.pth
+backend/*.pth.DS_Store
+frontend/.env

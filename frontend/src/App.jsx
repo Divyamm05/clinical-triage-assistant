@@ -20,7 +20,8 @@ export default function App() {
       const formData = new FormData()
       formData.append("file", file)
 
-      const res = await axios.post("http://localhost:8000/predict", formData)
+      const apiUrl = import.meta.env.VITE_API_URL || ""
+      const res = await axios.post(`${apiUrl}/predict`, formData)
       setResult(res.data)
     } catch (err) {
       setError("Something went wrong. Make sure the backend is running.")
@@ -31,7 +32,6 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header */}
       <header className="bg-blue-700 text-white py-5 px-6 shadow">
         <h1 className="text-2xl font-bold">🏥 Clinical Triage Assistant</h1>
         <p className="text-blue-200 text-sm mt-1">AI-powered chest X-ray analysis with explainability</p>
@@ -45,7 +45,6 @@ export default function App() {
           file={file}
         />
 
-        {/* Loading state */}
         {loading && (
           <div className="bg-white rounded-2xl shadow-md p-8 text-center">
             <div className="text-4xl mb-3 animate-pulse">🔬</div>
