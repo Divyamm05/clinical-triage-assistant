@@ -1,5 +1,13 @@
-# 🏥 Clinical Triage Assistant
+---
+title: Clinical Triage Assistant
+emoji: 🏥
+colorFrom: blue
+colorTo: indigo
+sdk: docker
+pinned: false
+---
 
+# 🏥 Clinical Triage Assistant
 AI-powered chest X-ray analysis with explainability, built with PyTorch, FastAPI, and React.
 
 ## Features
