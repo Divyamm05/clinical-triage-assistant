@@ -6,8 +6,8 @@ from contextlib import asynccontextmanager
 import io
 import os
 
-from model import load_model, preprocess_image, predict, get_triage
-from gradcam import generate_heatmap
+from backend.model import load_model, preprocess_image, predict, get_triage
+from backend.gradcam import generate_heatmap
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
